@@ -1,13 +1,12 @@
-package main
+package dictmatch_tries
 
 import (
 	"fmt"
-	"github.com/flashfeifei/dictmatch_tries"
+	"testing"
 )
 
-func main() {
-
-	s := dictmatch_tries.NewKeyWordServer()
+func TestDicmatchTries(t *testing.T){
+	s := NewKeyWordServer()
 	//加入数据
 	s.Put(1, "五月天")
 	s.Put(2, "澳门皇家赌场")
@@ -19,6 +18,4 @@ func main() {
 	//fmt.Println(s.Sugg("ba", 2))
 	//fmt.Println(s.Search("a", 2))
 	fmt.Println(s.Search("荷官", 4))
-	//fmt.Println(s.Search("c", 2))
-	//fmt.Println(s.Search("ba", 2))
 }
